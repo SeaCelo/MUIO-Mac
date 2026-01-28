@@ -54,6 +54,5 @@ cat <<EOF
 Created app bundle:
   $APP_PATH
 
-EOF
 You can double-click it to launch MUIO (opens Terminal).
 EOF

@@ -25,4 +25,14 @@ if [[ -z "${MUIO_SOLVER_BIN_DIR:-}" && -d "/opt/homebrew/bin" ]]; then
 fi
 
 cd "$ROOT_DIR"
-exec python "$ROOT_DIR/platform/macos_arm_launcher.py"
+
+python "$ROOT_DIR/platform/macos_arm_launcher.py" &
+APP_PID=$!
+
+if [[ "${MUIO_OPEN_BROWSER:-1}" == "1" ]]; then
+  sleep "${MUIO_BROWSER_DELAY:-1}"
+  open "http://127.0.0.1:5002/"
+fi
+
+trap 'kill "$APP_PID" 2>/dev/null' INT TERM
+wait "$APP_PID"

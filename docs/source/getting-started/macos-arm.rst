@@ -45,7 +45,7 @@ Install solvers:
 
 .. code-block:: bash
 
-   brew install glpk coin-or-cbc
+   brew install glpk cbc
 
 Create the Conda environment and install Python dependencies:
 

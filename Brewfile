@@ -1,2 +1,2 @@
 brew "glpk"
-brew "coin-or-cbc"
+brew "cbc"

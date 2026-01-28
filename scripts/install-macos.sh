@@ -69,7 +69,16 @@ if [[ "$INSTALL_SOLVERS" != "no" ]]; then
       if [[ $USE_BREW_BUNDLE -eq 1 && -f "$ROOT_DIR/Brewfile" ]]; then
         brew bundle --file "$ROOT_DIR/Brewfile"
       else
-        brew install glpk coin-or-cbc
+        cbc_formula="cbc"
+        if ! brew info "$cbc_formula" >/dev/null 2>&1; then
+          if brew info "coin-or-cbc" >/dev/null 2>&1; then
+            cbc_formula="coin-or-cbc"
+          else
+            echo "Homebrew formula for CBC not found. Try: brew search cbc" >&2
+            exit 1
+          fi
+        fi
+        brew install glpk "$cbc_formula"
       fi
     else
       read -r -p "Install solvers via Homebrew now? [y/N] " reply
@@ -77,7 +86,16 @@ if [[ "$INSTALL_SOLVERS" != "no" ]]; then
         if [[ $USE_BREW_BUNDLE -eq 1 && -f "$ROOT_DIR/Brewfile" ]]; then
           brew bundle --file "$ROOT_DIR/Brewfile"
         else
-          brew install glpk coin-or-cbc
+          cbc_formula="cbc"
+          if ! brew info "$cbc_formula" >/dev/null 2>&1; then
+            if brew info "coin-or-cbc" >/dev/null 2>&1; then
+              cbc_formula="coin-or-cbc"
+            else
+              echo "Homebrew formula for CBC not found. Try: brew search cbc" >&2
+              exit 1
+            fi
+          fi
+          brew install glpk "$cbc_formula"
         fi
       fi
     fi

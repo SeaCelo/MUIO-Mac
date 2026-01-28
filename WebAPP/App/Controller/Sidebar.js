@@ -2,6 +2,7 @@ import { GROUPNAMES, PARAMORDER, PARAMCOLORS, RESULTPARAMORDER, RESULTPARAMCOLOR
 import { Model } from "../Model/Sidebar.Model.js";
 import { Osemosys } from "../../Classes/Osemosys.Class.js";
 import { Message } from "../../Classes/Message.Class.js";
+import { Base } from "../../Classes/Base.Class.js";
 
 export class Sidebar {
     static Reload(casename) {
@@ -210,6 +211,33 @@ export class Sidebar {
             //$(selector).removeClass('open');
             $(this).parent().closest("li").addClass('active');
             $(this).addClass('active');
+        });
+
+        $('#osy-quit').off('click').on('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const doQuit = () => {
+                Base.quit()
+                    .then(response => {
+                        Message.bigBoxSuccess('Quit', response.message || 'Shutting down...', 2000);
+                    })
+                    .catch(error => {
+                        Message.bigBoxDanger('Quit error', error, 3000);
+                    });
+            };
+            if ($.SmartMessageBox) {
+                $.SmartMessageBox({
+                    title: "Quit MUIO?",
+                    content: "This will stop the local server. Are you sure?",
+                    buttons: '[No][Yes]'
+                }, function (ButtonPressed) {
+                    if (ButtonPressed === "Yes") {
+                        doQuit();
+                    }
+                });
+            } else if (window.confirm("This will stop the local server. Quit MUIO?")) {
+                doQuit();
+            }
         });
 
         //Search menu

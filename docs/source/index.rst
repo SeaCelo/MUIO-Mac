@@ -32,6 +32,7 @@ Documentation
 
 * :doc:`/getting-started/introduction`
 * :doc:`/getting-started/installation`
+* :doc:`/getting-started/macos-arm`
 * :doc:`/getting-started/quick-start`
 
 .. toctree::
@@ -41,6 +42,7 @@ Documentation
 
    getting-started/introduction
    getting-started/installation
+   getting-started/macos-arm
    getting-started/quick-start
 
 **Structure of OSeMOSYS in MUIO**

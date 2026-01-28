@@ -1,6 +1,8 @@
 #import sys
 import os
 import sys
+import threading
+import time
 
 from flask import Flask, jsonify, request, session, render_template
 from flask_cors import CORS
@@ -109,6 +111,15 @@ def setSession():
         return jsonify('No selected parameters!'), 404
 
 
+@app.route("/shutdown", methods=['POST'])
+def shutdown():
+    def _shutdown():
+        time.sleep(0.2)
+        os._exit(0)
+    threading.Thread(target=_shutdown, daemon=True).start()
+    return jsonify({"message": "Shutting down...", "status_code": "success"}), 200
+
+
 if __name__ == '__main__':
 # if __name__ == 'app':
     #potrebno radi module js importa u index.html ES6 modules
@@ -128,4 +139,3 @@ if __name__ == '__main__':
         #HEROKU
         app.run(host='0.0.0.0', port=port, debug=True)
         #app.run(host='127.0.0.1', port=port, debug=True)
-

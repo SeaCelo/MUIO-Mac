@@ -126,6 +126,26 @@ export class Base {
         });
     }
 
+    static quit() {
+        return new Promise((resolve, reject) => {
+            $.ajax({
+                url: this.apiUrl() + "shutdown",
+                async: true,
+                type: 'POST',
+                dataType: 'json',
+                data: JSON.stringify({}),
+                contentType: 'application/json; charset=utf-8',
+                success: function (result) {
+                    resolve(result);
+                },
+                error: function (xhr, status, error) {
+                    if (error == 'UNKNOWN') { error = xhr.responseJSON.message }
+                    reject(error);
+                }
+            });
+        });
+    }
+
     static getCaseDesc(casename) {
         return new Promise((resolve, reject) => {
             $.ajax({

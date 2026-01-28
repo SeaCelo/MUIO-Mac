@@ -4,6 +4,10 @@ dist/
 build/
 venv/
 venv
+.DS_Store
+*.app
+*.dmg
+*.zip
 API/__pycache__
 API/Classes/__pycache__
 API/Classes/Base/__pycache__

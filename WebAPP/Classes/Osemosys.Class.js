@@ -365,7 +365,8 @@ export class Osemosys {
         // .then(response => response.json())
         // .catch(error => error);
 
-        return fetch('../../DataStorage/'+casename+'/'+dataJson, {cache: "no-store"}) 
+        const encodedCase = encodeURIComponent(casename);
+        return fetch('../../DataStorage/'+encodedCase+'/'+dataJson, {cache: "no-store"}) 
             .then((response) => {
                 if (response.ok) {
                     //console.log('response1 ', response)
@@ -379,7 +380,8 @@ export class Osemosys {
     }
 
     static getData_(casename, dataJson) {
-        return  fetch('../../DataStorage/'+casename+'/'+dataJson, {cache: "no-store"})
+        const encodedCase = encodeURIComponent(casename);
+        return  fetch('../../DataStorage/'+encodedCase+'/'+dataJson, {cache: "no-store"})
         .then((response) => {
             if (response.status !== 200) {
               //console.log('Looks like there was a problem. Status Code: ' + response.status);
@@ -409,7 +411,8 @@ export class Osemosys {
         //     });
         // });
 
-        return fetch('../../DataStorage/'+casename+'/view/' +dataJson, {cache: "no-store"})
+        const encodedCase = encodeURIComponent(casename);
+        return fetch('../../DataStorage/'+encodedCase+'/view/' +dataJson, {cache: "no-store"})
             .then((response) => {
                 if (response.ok) {
                     //console.log('response1 ', response)

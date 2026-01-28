@@ -2,6 +2,8 @@
 Installation
 ################
 
+For macOS Apple Silicon, see :doc:`/getting-started/macos-arm`.
+
 Follow the steps below to install MUIO on a Windows system:
 
 1. Download the latest version of the user interface from `here <https://forms.office.com/Pages/ResponsePage.aspx?id=wE8mz7iun0SQVILORFQISwwn5YyR7ONHs-3JdG3f5AFUODlJOEQwWTBXMlRRNFUwNEpUTUZYQ1RXOS4u>`_.
@@ -17,4 +19,3 @@ Follow the steps below to install MUIO on a Windows system:
 .. note::
 
    If Windows blocks the installer or flags it as unknown, click **More Info** → **Run Anyway** to proceed.
-

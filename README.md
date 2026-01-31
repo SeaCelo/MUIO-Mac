@@ -51,15 +51,18 @@ Step 3 — Get the MUIO code
 
 If you already have the MUIO folder, skip this step.
 
-First, go to the folder where you want MUIO to live (for example, your home
+First, go to the location where you want MUIO to live (for example, your home
 folder or Documents):
 
 ```
 cd ~
 ```
 
+Clone this branch: 
 ```
-git clone https://github.com/SeaCelo/MUIO.git
+git clone --branch macport https://github.com/SeaCelo/MUIO.git
+```
+```
 cd MUIO
 ```
 

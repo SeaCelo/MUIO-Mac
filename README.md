@@ -1,25 +1,31 @@
-# Modelling User Interface for OSeMOSYS (MUIO)
+# Modelling User Interface for OSeMOSYS (MUIO) - MacOS port
 
-![License](https://img.shields.io/github/license/OSeMOSYS/MUIO)
-![Version](https://img.shields.io/github/v/release/OSeMOSYS/MUIO)
-![GitHub all releases](https://img.shields.io/github/downloads/OSeMOSYS/MUIO/total)
+![License](https://img.shields.io/github/license/SeaCelo/MUIO-Mac)
+![Version](https://img.shields.io/github/v/release/SeaCelo/MUIO-Mac)
+![GitHub all releases](https://img.shields.io/github/downloads/SeaCelo/MUIO-Mac/total)
 
-This repository contains the user interface for the Open Source Energy Modelling System (OSeMOSYS). OSeMOSYS is a linear optimization energy system model designed to minimize total system costs while ensuring energy demands are met within specified constraints. It facilitates optimal allocation of energy resources, technologies, and investments over time, supporting long-term energy planning and policy analysis.
+This repository provides a macOS Apple Silicon (ARM64) port of MUIO, the user interface for the Open Source Energy Modelling System (OSeMOSYS). OSeMOSYS is a linear optimization energy system model that identifies least cost energy system pathways subject to meeting energy demands and other constraints. It supports analysis of technology choices, investment needs, and policy scenarios over time.
 
+## macOS Apple Silicon port
 
-1.	Download the latest version of the user interface from [here](https://forms.office.com/Pages/ResponsePage.aspx?id=wE8mz7iun0SQVILORFQISwwn5YyR7ONHs-3JdG3f5AFUODlJOEQwWTBXMlRRNFUwNEpUTUZYQ1RXOS4u). 
-2.	Move the .exe file from your download folder to a folder where you have administrator privileges. This may be for instance inside the folder: users>>name_of_the_user or any other folder you prefer. 
-3.	Right-click on MUIO.exe and click ‘Run as administrator’. This will start the installation of the MUIO. The installation may take several minutes. Once it is complete, the installation window will simply disappear. 
-4.	The App will open automatically once the installation is complete. If not, search on the Windows Taskbar for ‘’MUIO’’ and open the App. 
-5.	You will see the MUIO in a new window. 
+This fork exists to support macOS Apple Silicon and includes platform specific adjustments (for example, macOS tooling, paths, and launch behavior). For macOS users, the `macport` branch is the supported branch in this repository.
+
+Because the changes are specific to macOS, this repository is maintained as a separate port and is not intended for pull requests to the upstream project.
+
+## Windows version
+
+For the original Windows version of MUIO, use the upstream repository and installer:
+
+- Upstream repository: https://github.com/OSeMOSYS/MUIO
+- Windows download and installer: https://forms.office.com/Pages/ResponsePage.aspx?id=wE8mz7iun0SQVILORFQISwwn5YyR7ONHs-3JdG3f5AFUODlJOEQwWTBXMlRRNFUwNEpUTUZYQ1RXOS4u
 
 ## Questions and Issues
 
-For troubleshooting model-related issues and discussions, please visit the [Energy Modelling Community Discussion Forum](https://forum.u4ria.org/). 
+For troubleshooting model related questions and discussions, please visit the [Energy Modelling Community Discussion Forum](https://forum.u4ria.org/).
 
-If you encounter bugs or have new feature ideas, please submit them to the repository's issue tracker. We encourage contributions and discussions to further develop MUIO.
+If you encounter bugs in this macOS port or have feature ideas, please open an issue in this repository so they can be tracked against the macOS specific code and scripts.
 
-## MacOS Apple Silicon (web interface)
+## Installing and running MUIO-Mac 
 
 These steps are written to be beginner‑friendly. You can copy/paste each command.
 
@@ -47,28 +53,28 @@ https://www.anaconda.com/docs/getting-started/anaconda/install#macos-command-lin
 
 After installation, close and reopen Terminal so `conda` is available.
 
-Step 3 — Get the MUIO code
+Step 3 — Get the MUIO-Mac code
 
-If you already have the MUIO folder, skip this step.
+If you already have the MUIO-Mac folder, skip this step.
 
-First, go to the location where you want MUIO to live (for example, your home
+First, go to the location where you want MUIO-Mac to live (for example, your home
 folder or Documents):
 
 ```
 cd ~
 ```
 
-Clone this branch: 
+Clone the `macport` branch of this repo: 
 ```
-git clone --branch macport https://github.com/SeaCelo/MUIO.git
+git clone --branch macport https://github.com/SeaCelo/MUIO-Mac.git
 ```
 ```
-cd MUIO
+cd MUIO-Mac
 ```
 
-Step 4 — Install MUIO (one command)
+Step 4 — Install MUIO-Mac (one command)
 
-From the MUIO folder:
+From the MUIO-Mac folder:
 
 ```
 ./scripts/install-macos.sh --install-solvers
@@ -77,7 +83,7 @@ From the MUIO folder:
 This command installs Python dependencies and uses Homebrew to install the
 required solvers (GLPK and CBC).
 
-Step 5 — Run MUIO
+Step 5 — Run MUIO-Mac
 
 ```
 ./scripts/run-macos.sh
@@ -85,11 +91,11 @@ Step 5 — Run MUIO
 
 Optional — Create a macOS app (double‑click launcher)
 
-This creates `dist/MUIO.app` that opens Terminal and starts the server:
+This creates `dist/MUIO-Mac.app` that opens Terminal and starts the server:
 
 ```
 ./scripts/create-macos-app.sh
 ```
 
 You can create a Desktop shortcut manually if you want (for example, drag the
-app **alias** to Desktop). Keep the actual app bundle inside the MUIO folder.
+app **alias** to Desktop). Keep the actual app bundle inside the MUIO-Mac folder.

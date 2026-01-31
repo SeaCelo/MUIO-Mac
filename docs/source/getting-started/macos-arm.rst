@@ -73,14 +73,14 @@ Or using the helper script:
 Create a macOS app bundle (optional)
 ====================================
 
-This creates ``dist/MUIO.app`` that launches the server in Terminal:
+This creates ``dist/MUIO-Mac.app`` that launches the server in Terminal:
 
 .. code-block:: bash
 
    ./scripts/create-macos-app.sh
 
 You can create a Desktop shortcut manually if you want (for example, drag the
-app **alias** to Desktop). Keep the actual app bundle inside the MUIO folder.
+app **alias** to Desktop). Keep the actual app bundle inside the MUIO-Mac folder.
 
 Optional: Override solver location
 =================================

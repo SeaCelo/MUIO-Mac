@@ -2,7 +2,9 @@
 Contributing
 ###########################
 
-We warmly welcome anyone interested in MUIO and the broader OSeMOSYS ecosystem! Whether you have ideas, suggestions, bug reports, or would like to contribute improvements, your input is highly valued.
+We warmly welcome anyone interested in MUIO and the broader OSeMOSYS ecosystem! This repository is the macOS port of MUIO. The upstream Windows version and broader community resources remain in `OSeMOSYS/MUIO <https://github.com/OSeMOSYS/MUIO>`_.
+
+Contributions here should focus on macOS-specific tooling, documentation, and compatibility. We keep base code aligned with upstream and do not submit PRs from this repo back to upstream.
 
 How You Can Contribute
 ---------------------------
@@ -25,19 +27,19 @@ Code Contributions
 
 Want to suggest a fix or add a feature? Here's a quick and easy workflow:
 
-1.	Fork the repository: Click the “Fork” button on the  `MUIO GitHub page <https://github.com/OSeMOSYS/MUIO>`_
+1.	Fork the repository: Click the “Fork” button on the  `MUIO-Mac GitHub page <https://github.com/SeaCelo/MUIO-Mac>`_
 
 2.	Clone your fork: Copy the link to your fork and run:
 
 .. code:: bash
 
-    git clone https://github.com/<your-username>/MUIO.git
+    git clone https://github.com/<your-username>/MUIO-Mac.git
    
 3.	Make your changes: Create a new branch and make your edits or improvements in the code. 
 
 4.	Test your changes: If there are tests, run them locally. If not, just make sure your edits work as expected.
 
-5.	Push and open a pull request: Push your branch to your fork and go to GitHub to open a pull request.
+5.	Push and open a pull request: Push your branch to your fork and go to GitHub to open a pull request against the `macport` branch.
 
 Documentation
 -------------------
@@ -91,7 +93,7 @@ We welcome examples that:
      - A ``README.md`` describing the model purpose, data source, and assumptions
      - *(Optional)* Output plots or summary results
 
-2. Fork and clone the MUIO repository.
+2. Fork and clone the MUIO-Mac repository.
 
 3. Add your folder under ``/examples``.  
    If it’s large, consider linking to an external repository or storage (e.g. Zenodo, Figshare).

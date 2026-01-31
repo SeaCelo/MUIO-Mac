@@ -6,7 +6,7 @@
 MUIO: Modelling User Interface for OSeMOSYS
 ================================
 
-.. image:: https://img.shields.io/github/license/OSeMOSYS/MUIO
+.. image:: https://img.shields.io/github/license/SeaCelo/MUIO-Mac
     :target: LICENSE.txt
     :alt: License
 

@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 OUT_DIR="$ROOT_DIR/dist"
-APP_NAME="${MUIO_APP_NAME:-MUIO}"
+APP_NAME="${MUIO_APP_NAME:-MUIO-Mac}"
 APP_PATH="$OUT_DIR/${APP_NAME}.app"
 ENV_NAME="${MUIO_ENV_NAME:-muio-dev}"
 

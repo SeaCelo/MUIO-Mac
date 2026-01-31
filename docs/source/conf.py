@@ -33,7 +33,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = "sphinx_book_theme"
 
 html_theme_options = {
-    "repository_url": "https://github.com/OSeMOSYS/MUIO",
+    "repository_url": "https://github.com/SeaCelo/MUIO-Mac",
     "use_repository_button": True,
     "use_edit_page_button": True,
     "path_to_docs": "docs/source",
@@ -62,4 +62,3 @@ texinfo_documents = [
     (master_doc, 'MUIO', 'MUIO Documentation', author, 'MUIO',
      'An interface to build OSeMOSYS energy models.', 'Miscellaneous'),
 ]
-

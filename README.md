@@ -58,7 +58,25 @@ git clone --branch main https://github.com/SeaCelo/MUIO-Mac.git
 cd MUIO-Mac
 ```
 
-**Step 4 — Install MUIO-Mac**
+**Step 4 — Install demo data (required)**
+
+Download the demo dataset (matches the MUIO.exe demo data):
+
+https://github.com/SeaCelo/MUIO-Mac/releases/download/demo-data-v1/CLEWs.Demo.zip
+
+Unzip it into:
+
+```
+WebAPP/DataStorage
+```
+
+After unzipping, you should have:
+
+```
+WebAPP/DataStorage/CLEWs Demo/...
+```
+
+**Step 5 — Install MUIO-Mac**
 
 This installs Python dependencies and Homebrew solvers (GLPK and CBC). From the MUIO-Mac folder:
 
@@ -66,7 +84,7 @@ This installs Python dependencies and Homebrew solvers (GLPK and CBC). From the 
 ./scripts/install-macos.sh --install-solvers
 ```
 
-**Step 5 — Run MUIO-Mac**
+**Step 6 — Run MUIO-Mac**
 
 ```
 ./scripts/run-macos.sh

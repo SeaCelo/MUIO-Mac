@@ -4,6 +4,7 @@ dist/
 build/
 venv/
 venv
+.vscode/
 .DS_Store
 *.app
 *.dmg

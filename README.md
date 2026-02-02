@@ -58,7 +58,7 @@ git clone --branch main https://github.com/SeaCelo/MUIO-Mac.git
 cd MUIO-Mac
 ```
 
-**Step 4 — Install demo data (required)**
+**Step 4 — Install demo data (optional)**
 
 Download the demo dataset (matches the MUIO.exe demo data):
 

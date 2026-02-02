@@ -39,7 +39,7 @@ Want to suggest a fix or add a feature? Here's a quick and easy workflow:
 
 4.	Test your changes: If there are tests, run them locally. If not, just make sure your edits work as expected.
 
-5.	Push and open a pull request: Push your branch to your fork and go to GitHub to open a pull request against the `macport` branch.
+5.	Push and open a pull request: Push your branch to your fork and go to GitHub to open a pull request against the `main` branch.
 
 Documentation
 -------------------

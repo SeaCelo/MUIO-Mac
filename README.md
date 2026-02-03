@@ -5,6 +5,7 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/SeaCelo/MUIO-Mac/total)
 
 This repository provides a macOS Apple Silicon (ARM64) port of MUIO.
+Current upstream baseline: MUIO v5.4.
 
 For the Windows version: https://github.com/OSeMOSYS/MUIO
 For the MUIO documentation: https://muio-modelling-user-interface-for-osemosys.readthedocs.io/en/latest/

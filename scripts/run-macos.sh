@@ -30,7 +30,7 @@ python "$ROOT_DIR/platform/macos_arm_launcher.py" &
 APP_PID=$!
 
 if [[ "${MUIO_OPEN_BROWSER:-1}" == "1" ]]; then
-  sleep "${MUIO_BROWSER_DELAY:-1}"
+  sleep "${MUIO_BROWSER_DELAY:-2}"
   open "http://127.0.0.1:5002/"
 fi
 

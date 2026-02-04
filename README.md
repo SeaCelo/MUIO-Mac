@@ -6,6 +6,7 @@
 
 This repository provides a macOS Apple Silicon (ARM64) port of MUIO.
 Current upstream baseline: MUIO v5.4.
+Changelog: CHANGELOG.md
 
 For the Windows version: https://github.com/OSeMOSYS/MUIO
 For the MUIO documentation: https://muio-modelling-user-interface-for-osemosys.readthedocs.io/en/latest/
